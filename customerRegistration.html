@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Farmers Welfare</h1>
+        <div id="header-right">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Registration Form for Customer -->
+    <section id="registration">
+        <h2>Register as a Customer</h2>
+        <form id="registrationForm" onsubmit="event.preventDefault(); registerCustomer();">
+            <label for="regUsername">Username:</label>
+            <input type="text" id="regUsername" name="regUsername" required>
+            
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" name="regPassword" required>
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Farmer Management System. All rights reserved.</p>
+    </footer>
+    <script src="customerRegistration.js"></script>
+</body>
+</html>

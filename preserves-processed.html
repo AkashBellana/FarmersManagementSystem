@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preserves and Processed Goods</title>
+    <link rel="stylesheet" href="ecommerce.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Preserves and Processed Goods</h1>
+        <div id="header-right">
+            <button id="cart-btn" onclick="toggleCart()">Cart (0)</button>
+            
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </header>
+    
+    <!-- Product Listings for Preserves and Processed Goods -->
+    <section id="product-list">
+        <h2>Happy Shopping</h2>
+        <div class="product">
+            <img src="path-to-image/preserves-processed1.jpg" alt="Preserves Processed 1">
+            <h3>Strawberry Jam</h3>
+            <p>Price: $5 per jar</p>
+            <button onclick="addToCart('Strawberry Jam', 5)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="path-to-image/preserves-processed2.jpg" alt="Preserves Processed 2">
+            <h3>Organic Pasta Sauce</h3>
+            <p>Price: $7 per bottle</p>
+            <button onclick="addToCart('Organic Pasta Sauce', 7)">Add to Cart</button>
+        </div>
+        <!-- Add more products for Preserves and Processed Goods here -->
+    </section>
+
+    <!-- Cart Section (Initially hidden) -->
+    <section id="cart" style="display:none;">
+        <h2>Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will be listed here dynamically -->
+        </ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+    </section>
+
+    <script src="ecommerce.js"></script>
+</body>
+</html>

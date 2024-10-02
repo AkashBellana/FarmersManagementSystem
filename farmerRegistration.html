@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Farmers Welfare</h1>
+        <div id="header-right">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Registration Form for Farmer -->
+    <section id="registration">
+        <h2>Register as a Farmer</h2>
+        <form id="registrationForm" onsubmit="event.preventDefault(); registerFarmer();">
+            <label for="regName">Name:</label>
+            <input type="text" id="regName" name="regName" required>
+            
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" name="regPassword" required>
+            
+            <label for="regFarmSize">Farm Size (in acres):</label>
+            <input type="number" id="regFarmSize" name="regFarmSize" required>
+            
+            <label for="regCrops">Crops Grown:</label>
+            <input type="text" id="regCrops" name="regCrops" required>
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Farmer Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- Include JavaScript file -->
+    <script src="farmerRegistration.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant-Based Foods E-Commerce</title>
+    <link rel="stylesheet" href="ecommerce.css"> <!-- New CSS file -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Plantinos</h1>
+        <div id="header-right">
+            <button id="cart-btn" onclick="toggleCart()">Cart (0)</button>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </header>
+    
+    <!-- Customer Dashboard Section -->
+    <section id="customer-dashboard">
+        <h2>Explore Categories</h2>
+        <div class="category" onclick="location.href='fresh-produce.html'">
+            <h3>Fresh Produce</h3>
+            <p>Explore a variety of fresh fruits and vegetables.</p>
+        </div>
+        <div class="category" onclick="location.href='dairy-meat.html'">
+            <h3>Dairy and Meat Products</h3>
+            <p>Find a range of dairy products and meats.</p>
+        </div>
+        <div class="category" onclick="location.href='preserves-processed.html'">
+            <h3>Preserves and Processed Goods</h3>
+            <p>Check out our selection of preserves and processed items.</p>
+        </div>
+        <div class="category" onclick="location.href='handcrafted-goods.html'">
+            <h3>Handcrafted Goods</h3>
+            <p>Discover unique handcrafted items.</p>
+        </div>
+        <div class="category" onclick="location.href='eco-friendly.html'">
+            <h3>Eco-Friendly Products</h3>
+            <p>Shop sustainable and eco-friendly products.</p>
+        </div>
+    </section>
+
+    <!-- Cart Section (Initially hidden) -->
+    <section id="cart" style="display:none;">
+        <h2>Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will be listed here dynamically -->
+        </ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+        <button onclick="if (cart.length > 0) { window.location.href = 'checkout.html'; } else { alert('Your cart is empty. Add items to the cart before proceeding.'); }">Checkout</button>
+
+
+    </section>
+
+    <script src="ecommerce.js"></script>
+</body>
+</html>

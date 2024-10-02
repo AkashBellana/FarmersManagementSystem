@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafted Goods</title>
+    <link rel="stylesheet" href="ecommerce.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Handcrafted Goods</h1>
+        <div id="header-right">
+            <button id="cart-btn" onclick="toggleCart()">Cart (0)</button>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </header>
+    
+    <!-- Product Listings for Handcrafted Goods -->
+    <section id="product-list">
+        <h2>Happy Shopping</h2>
+        <div class="product">
+            <img src="path-to-image/handcrafted1.jpg" alt="Handcrafted 1">
+            <h3>Handmade Pottery</h3>
+            <p>Price: $20 per piece</p>
+            <button onclick="addToCart('Handmade Pottery', 20)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="path-to-image/handcrafted2.jpg" alt="Handcrafted 2">
+            <h3>Handwoven Basket</h3>
+            <p>Price: $15 each</p>
+            <button onclick="addToCart('Handwoven Basket', 15)">Add to Cart</button>
+        </div>
+        <!-- Add more products for Handcrafted Goods here -->
+    </section>
+
+    <!-- Cart Section (Initially hidden) -->
+    <section id="cart" style="display:none;">
+        <h2>Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will be listed here dynamically -->
+        </ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+    </section>
+
+    <script src="ecommerce.js"></script>
+</body>
+</html>

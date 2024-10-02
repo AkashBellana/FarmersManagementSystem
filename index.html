@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add styles for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover #signup-btn {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Farmers Welfare</h1>
+        <div id="header-right">
+            <!-- Dropdown for Customer/Farmer registration -->
+            <div class="dropdown">
+                <button id="signup-btn">Sign Up</button>
+                <div class="dropdown-content">
+                    <a href="customerRegistration.html">Customer</a>
+                    <a href="farmerRegistration.html">Farmer</a>
+                </div>
+            </div>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </section>
+     
+    <!-- Farmer Dashboard (Will be hidden initially) -->
+    <section id="farmerDashboard" style="display:none;">
+        <h2>Welcome Farmer</h2>
+        <!-- Farmer Profile Form -->
+        <form id="farmerProfile" onsubmit="event.preventDefault(); saveProfile();">
+            <label for="farmerName">Name:</label>
+            <input type="text" id="farmerName" name="farmerName" required>
+            <br><br>
+            <label for="farmSize">Farm Size (in acres):</label>
+            <input type="number" id="farmSize" name="farmSize" required>
+            <br><br>
+            <label for="crops">Crops Grown:</label>
+            <input type="text" id="crops" name="crops" required>
+            <br><br>
+            <button type="submit">Save Profile</button>
+        </form>
+        
+        <!-- Button to go to Product Listing Page -->
+        <button id="productPageBtn" style="display:none;" onclick="window.location.href='productListing.html'">Go to Product Listing</button>
+    </section>
+
+    <!-- Customer Dashboard (Initially hidden) -->
+    <section id="customerDashboard" style="display:none;">
+        <h2>Welcome Customer</h2>
+        <!-- Redirect to E-commerce site -->
+        <button onclick="window.location.href='ecommerce.html'">Go to E-Commerce Site</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Farmer Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Particle Effects -->
+    <script src="script.js"></script>
+</body>
+</html>

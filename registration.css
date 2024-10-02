@@ -1,0 +1,206 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #141414; /* Netflix black background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden; /* Ensure no scrollbars appear */
+    position: relative; /* For absolute positioning of canvas */
+}
+
+/* Particle Canvas */
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Ensure it stays behind other content */
+    animation: particlesAnimation 10s infinite; /* Added animation */
+}
+
+/* Header styling */
+#header {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    width: calc(100% - 40px); /* Full width minus left and right padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em; /* Adjusted font size */
+    font-weight: bold;
+    color: #E50914; /* Netflix red */
+}
+
+#header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    height: auto;
+}
+
+#language-select {
+    font-size: 0.8em; /* Adjust font size to fit text */
+    padding: 0; /* Remove extra padding */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 32px; /* Center text vertically */
+    overflow: hidden; /* Hide overflow text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+/* Language selection button */
+#language-select {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    width: 124.4px; /* Same width as the signup button */
+    height: 32px; /* Same height as the signup button */
+    padding: 0; /* Remove extra padding */
+    font-size: 0.7em; /* Adjust font size to fit text */
+}
+
+#language-select option {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Section container */
+section {
+    background-color: #222; /* Darker gray for sections */
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Section titles */
+h2 {
+    color: #E50914; /* Netflix red for headings */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Form container alignment */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add spacing between form elements */
+}
+
+/* Input field focus effect */
+form input[type="text"],
+form input[type="password"],
+form input[type="number"] {
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus {
+    border-color: #E50914; /* Netflix red border on focus */
+    outline: none;
+}
+
+/* Button hover effects */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+} 
+button:hover {
+    background-color: #f40612; /* Brighter red */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Adjust section visibility */
+#farmerDashboard,
+#customerDashboard,
+#registration { 
+    display: block; /* Display sections as needed */
+}
+
+/* For better readability on small screens */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    section {
+        width: 90%;
+    }
+}
+
+/* Footer styling */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222; /* Dark background for the footer */
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Fade-in and fade-out animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-out;
+}
+
+/* Background particle animation */
+@keyframes particlesAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}

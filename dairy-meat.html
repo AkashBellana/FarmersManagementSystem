@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy and Meat Products</title>
+    <link rel="stylesheet" href="ecommerce.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <h1>Dairy and Meat Products</h1>
+        <div id="header-right">
+            <button id="cart-btn" onclick="toggleCart()">Cart (0)</button>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </header>
+    
+    <!-- Product Listings for Dairy and Meat Products -->
+    <section id="product-list">
+        <h2>Happy Shopping</h2>
+        <div class="product">
+            <img src="path-to-image/dairy-meat1.jpg" alt="Dairy and Meat 1">
+            <h3>Organic Chicken Breast</h3>
+            <p>Price: $15 each</p>
+            <button onclick="addToCart('Organic Chicken Breast', 15)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="path-to-image/dairy-meat2.jpg" alt="Dairy and Meat 2">
+            <h3>Fresh Milk</h3>
+            <p>Price: $5 per liter</p>
+            <button onclick="addToCart('Fresh Milk', 5)">Add to Cart</button>
+        </div>
+        <!-- Add more products for Dairy and Meat Products here -->
+    </section>
+
+    <!-- Cart Section (Initially hidden) -->
+    <section id="cart" style="display:none;">
+        <h2>Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will be listed here dynamically -->
+        </ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+        
+    </section>
+
+    <script src="ecommerce.js"></script>
+</body>
+</html>
+
